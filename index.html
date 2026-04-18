@@ -23,16 +23,17 @@
     --border:rgba(20,18,16,0.08);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;overflow-x:hidden;width:100%;}
+  html{scroll-behavior:smooth;overflow-x:clip;width:100%;}
   body{
     background:var(--cream);
     color:var(--ink);
     font-family:'DM Sans',system-ui,sans-serif;
     font-weight:400;
-    overflow-x:hidden;
+    overflow-x:clip;
     width:100%;
     max-width:100vw;
     line-height:1.5;
+    position:relative;
   }
   body::before{
     content:'';position:fixed;inset:0;pointer-events:none;z-index:1;
@@ -383,6 +384,10 @@
     .plan-featured:hover,.plan-bespoke:hover{transform:translate(-3px,-3px);}
     .pullquote{transform:none;}
     .star-deco{right:5%;width:44px;height:44px;}
+    .blob-hero-1{width:260px;height:260px;right:-40px;top:80px;}
+    .blob-hero-2{width:200px;height:200px;left:-20px;bottom:40px;}
+    .blob-about{width:220px;height:220px;right:-40px;}
+    .services-bg .blob,.process-bg .blob{width:220px;height:220px;right:-40px;}
     .serve-grid{grid-template-columns:1fr;}
     .process-steps{grid-template-columns:1fr;}
     .contact-row{grid-template-columns:1fr;}
